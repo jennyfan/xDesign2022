@@ -55,13 +55,13 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--clr-light);
   margin: 0;
   color: var(--clr-black);
-  overflow-x: hidden;
 }
 p {  
   font-family: var(--font-serif);
@@ -145,9 +145,12 @@ hr {
 #nav {
   position: fixed;
   top: 0;
-  right: 10px;
-  margin: 10px;
+  left: 0;
+  padding: 10px;
   z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
 }
 
 
@@ -194,6 +197,10 @@ hr {
     width: 80%;
     margin: 0 auto;
   }
+  .intro_left, .intro_right {
+    width: 50%;
+    min-width: 300px;
+  }
 }
 
 
@@ -219,15 +226,23 @@ hr {
   height: 400px;
 }
 .panel_details {
+  width: 100%;
   max-width: 640px;
 }
-@media (max-width: 640px) and (orientation: portrait) { 
+@media (max-width: 640px) { 
   .panel {
     flex-direction: column;
   }
   .panel img {
-    width: 100%;
+    max-width: 60%;
     height: auto;
+    margin: 0 auto;
+  }
+  #panel1, #panel2, #panel3 {
+    margin: 0 auto;
+  }
+  .panel_details {
+    max-width: 90%;
     margin: 0 auto;
   }
 }
@@ -363,6 +378,15 @@ li, p.small {
 }
 .row > div:first-of-type {
   width: 180px;
+}
+
+
+@media (max-width: 600px) {
+  h3 { font-size: 28px; line-height: 32px;}
+  .subtitle { font-size: 16px; line-height: 20px; }
+  .table__schedule { align-content: center; }
+  .row { flex-direction: column; gap: 0; margin: 20px auto; }
+  .row > div:first-of-type { width: auto; } 
 }
 
 
