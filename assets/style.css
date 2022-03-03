@@ -1,8 +1,5 @@
 /* Font imports */
 
-/* Roboto Condensed */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
-
 /* Roslindale Display Condensed Light */
 @font-face {
   src: url('fonts/Roslindale-DisplayCondensedLight-Edu.woff2') format("woff2"),
@@ -47,7 +44,6 @@
   --clr-flesh: #EBDBCB;
   --font-serif: 'Roslindale', 'Georgia', serif;
   --font-sans: 'Raisonne', 'Arial', sans-serif;
-  --font-body: 'Roboto Condensed', 'Arial', sans-serif;
 }
 
 
@@ -126,7 +122,12 @@ header {
 }
 
 
-
+h1 a, h1 a:link, h1 a:visited,
+h2 a, h2 a:link, h2 a:visited,
+/* h3 a, h3 a:link, h3 a:visited, */
+h4 a, h4 a:link, h4 a:visited {
+  font-family: var(--font-sans);
+}
 a, a:link, a:visited {
   color: var(--clr-accent);
   text-decoration: none;
@@ -361,7 +362,7 @@ li, p.small {
   justify-items: center;
   background-color: var(--clr-black);
   color: var(--clr-white);
-  gap: 5rem;
+  gap: 3rem;
 }
 .table__schedule {
   display: flex;
