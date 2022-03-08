@@ -58,6 +58,7 @@ body {
   background-color: var(--clr-light);
   margin: 0;
   color: var(--clr-black);
+  overflow-x: hidden;
 }
 p {  
   font-family: var(--font-serif);
