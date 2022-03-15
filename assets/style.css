@@ -62,8 +62,8 @@ body {
 }
 p {  
   font-family: var(--font-serif);
-  font-size: 28px;
-  line-height: 48px;
+  font-size: 24px;
+  line-height: 40px;
 }
 
 
@@ -85,7 +85,7 @@ h2 {
 h3 {
   font-family: var(--font-serif);
   font-size: 44px;
-  line-height: 72px;
+  line-height: 56px;
   font-weight: 300;
   margin: 0.5rem 0 0.5rem;
 }
@@ -99,7 +99,7 @@ h4 {
 .subtitle {
   font-family: var(--font-sans);
   font-size: 20px;
-  line-height: 72px;
+  line-height: 24px;
 }
 
 
@@ -141,7 +141,8 @@ a:hover {
 
 hr {
   border: 0;
-  margin: 3rem 0;
+  width: 100%;
+  margin: 1rem auto;
 }
 
 #nav {
@@ -224,6 +225,10 @@ hr {
   flex-direction: row wrap;
   gap: 32px;
 }
+.panel:hover {
+  background-color: rgba(235, 219, 203, 0.4);
+  cursor: pointer;
+}
 .panel img {
   height: 400px;
 }
@@ -245,6 +250,11 @@ hr {
   }
   .panel_details {
     max-width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  #panel1, #panel2, #panel3 {
     margin: 0 auto;
   }
 }
@@ -352,8 +362,8 @@ ul {
 }
 li, p.small {
   font-family: var(--font-serif);
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 
@@ -428,8 +438,9 @@ li, p.small {
   transition: 300ms ease-in-out;
   --animate-duration: 300ms;
 }
+
 #modal__panel1 {
-  background-color: var(--clr-light);
+  background-color: var(--clr-flesh);
 }
 #modal__panel2 {
   background-color: var(--clr-tan);
@@ -460,10 +471,14 @@ li, p.small {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-around;
+  gap: 1rem;
 }
 .profile > div {
-  margin-right: 15px;
-  width: 250px;
+  max-width: 300px;
+}
+@media (max-width: 720px) { 
+  .profile > div {
+    max-width: 100%;
+  }
 }
