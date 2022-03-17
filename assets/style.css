@@ -51,7 +51,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -253,7 +253,7 @@ hr {
     margin: 0 auto;
   }
 }
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024) {
   #panel1, #panel2, #panel3 {
     margin: 0 auto;
   }
@@ -476,6 +476,9 @@ li, p.small {
 }
 .profile > div {
   max-width: 300px;
+}
+.profile img {
+  width: 100%;
 }
 @media (max-width: 720px) { 
   .profile > div {
